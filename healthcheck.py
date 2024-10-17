@@ -55,7 +55,7 @@ class TimeSeriesAnomalyDetector:
         :return: DataFrame with forecast and confidence intervals
         """
         # Fit the model
-        self.model.fit(df)
+        self.model.fit(df) #Longest Step
 
         # Create a DataFrame for future dates
         future = self.model.make_future_dataframe(periods=periods, freq=freq)
